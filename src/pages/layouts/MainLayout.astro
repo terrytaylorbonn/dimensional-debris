@@ -1,0 +1,37 @@
+---
+import Button from "../components/Button";
+
+// import "../styles/global.css";
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <p>Welcome to Dimensional Debris</p>
+
+    <p id="copyright"></p>
+  </body>
+  <p class="h-screen"></p>
+  <p class="h-screen"></p>
+  <Button client:visible />
+</html>
+
+<script>
+  import "../js/utils.js";
+</script>
+
+<style lang="scss">
+  p {
+    color: red;
+    &:hover {
+      color: blue;
+    }
+  }
+</style>
